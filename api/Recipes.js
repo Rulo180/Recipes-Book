@@ -3,6 +3,23 @@ SimpleSchema.extendOptions(['autoform']);
 
 Recipes = new Mongo.Collection('recipes');
 
+Recipes.allow({
+    insert: function(userId, doc) {
+        return !!userId;
+    }
+});
+
+
+Ingredient = new SimpleSchema({
+    name: {
+        type: String
+    },
+    amount: {
+        type: String
+    }
+});
+
+
 RecipeSchema = new SimpleSchema({
     name: {
         label: "Name",
@@ -12,6 +29,20 @@ RecipeSchema = new SimpleSchema({
         label: "Description",
         type: String
     },
+    ingredients: {
+        type: Array
+     },
+     "ingredients.$": Object,
+     "ingredients.$.name": String,
+     "ingredients.$.amount": String,
+    inMenu: {
+        type: Boolean,
+        defaultValue: false,
+        optional: true,
+        autoform: {
+            type: "hidden"
+        }
+    },
     author: {
         type: String,
         label: "Author",
@@ -19,7 +50,7 @@ RecipeSchema = new SimpleSchema({
             type: "hidden"
         },
         autoValue: function(){
-            return this.Meteor.userId();
+            return Meteor.userId();
         },
     },
     createdAt: {
