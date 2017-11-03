@@ -2,10 +2,10 @@
 import '../../ui/layouts/homeLayout.html';
 import '../../ui/layouts/mainLayout.html';
 import '../../ui/recipes/Recipes.html';
+import '../../ui/recipes/Recipes.js';
 import '../../ui/recipes/SingleRecipe.html';
 import '../../ui/layouts/header.html';
 import '../../ui/layouts/navLayout.html';
-import '../../ui/recipes/NewRecipe.html';
 
 FlowRouter.triggers.enter([function(context, redirect) {
     if(!Meteor.userId()) {        
@@ -37,6 +37,7 @@ FlowRouter.route('/recipe-book', {
 FlowRouter.route('/recipe/:_id', {
     name: 'recipe',
     action: function() {
+        console.log('/recipe/');
         GAnalytics.pageview();
         BlazeLayout.render('mainLayout', {main: 'SingleRecipe'});
     }
