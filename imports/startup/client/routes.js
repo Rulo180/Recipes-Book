@@ -16,7 +16,7 @@ FlowRouter.triggers.enter([function(context, redirect) {
 FlowRouter.route('/', {
     name: 'home',
     action: function() {
-        console.log("route");
+        console.log("/route");
         if(Meteor.userId()) {
             FlowRouter.go('recipe-book');
         }
@@ -28,6 +28,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/recipe-book', {
     name: 'recipe-book',
     action: function() {
+        console.log('/recipe-book');
         GAnalytics.pageview();
         BlazeLayout.render('mainLayout', {main: "Recipes"});
     }
