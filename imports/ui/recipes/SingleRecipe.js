@@ -1,4 +1,6 @@
+import { Meteor } from 'meteor/meteor';
 
+Meteor.subscribe('single', "kkwfhivnxi3NHvpKr");
 
 Template.SingleRecipe.onCreated(function() {
     var self = this;

@@ -6,7 +6,12 @@ Meteor.publish('recipes', function() {
 }); 
 
 Meteor.publish('singleRecipe', function(id) {
-    console.log('Single Recipe published.');
+    console.log('Single Recipe published...');
     check(id, String);
     return Recipes.find({_id: id});
 }); 
+
+Meteor.publish('single', function() {
+    console.log('prueba.....');
+    return Recipes.find({});
+});
