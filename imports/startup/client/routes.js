@@ -57,6 +57,6 @@ FlowRouter.route('/shopping-list', {
     name: 'shopping-list',
     action: function() {
         console.log('/shopping-list');
-        BlazeLayout.render('mainLayout', {main: 'Shopping-List'});
+        BlazeLayout.render('mainLayout', {main: 'ShoppingList'});
     }
 });
