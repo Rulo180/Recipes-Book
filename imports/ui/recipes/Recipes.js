@@ -5,7 +5,6 @@ import './NewRecipe.html';
 Template.Recipes.onCreated(function() {
     var self = this;
     self.autorun(function() {
-        console.log('Entro al subscribe.');
         self.subscribe('recipes');
     });
 });

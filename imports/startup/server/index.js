@@ -1,7 +1,3 @@
-import '../../api/recipes/server/publications.js';
-
-console.log("imports/startup/server/index.js"); // Se puede borrar
-
 /*
 // This defines a starting set of data to be loaded if the app is loaded with an empty db.
 import '../imports/startup/server/fixtures.js';
@@ -13,3 +9,6 @@ import '../imports/startup/server/security.js';
 // as an API to the client.
 import '../imports/api/api.js';
 */
+import '../../api/recipes/server/publications.js';
+
+console.log("imports/startup/server/index.js"); // Se puede borrar

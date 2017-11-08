@@ -1,6 +1,4 @@
-import { Meteor } from 'meteor/meteor';
 
-Meteor.subscribe('single', "kkwfhivnxi3NHvpKr");
 
 Template.SingleRecipe.onCreated(function() {
     var self = this;
@@ -14,7 +12,7 @@ Template.SingleRecipe.onCreated(function() {
 Template.SingleRecipe.helpers({
     recipe: ()=> {
         console.log('Entro a SingleRecipe.helpers');
-        var id = FlowRouter.getParam('_id');        
+        var id = FlowRouter.getParam('_id');       
         return Recipes.find({_id: id});
     }
 });

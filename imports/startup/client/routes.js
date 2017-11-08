@@ -4,6 +4,7 @@ import '../../ui/layouts/mainLayout.html';
 import '../../ui/recipes/Recipes.html';
 import '../../ui/recipes/Recipes.js';
 import '../../ui/recipes/SingleRecipe.html';
+import '../../ui/recipes/SingleRecipe.js';
 import '../../ui/layouts/header.html';
 import '../../ui/layouts/navLayout.html';
 
