@@ -1,4 +1,5 @@
 import './Recipe.html';
+import './Recipe.js';
 import './NewRecipe.html';
 //console.log("Public scope: " + Meteor.settings.public.ga.account);
 

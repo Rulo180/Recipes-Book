@@ -5,8 +5,9 @@ import '../../ui/recipes/Recipes.html';
 import '../../ui/recipes/Recipes.js';
 import '../../ui/recipes/SingleRecipe.html';
 import '../../ui/recipes/SingleRecipe.js';
-import '../../ui/layouts/header.html';
-import '../../ui/layouts/navLayout.html';
+import '../../ui/Menu.html';
+import '../../ui/Shopping-List.html';
+
 
 FlowRouter.triggers.enter([function(context, redirect) {
     if(!Meteor.userId()) {        
@@ -42,6 +43,20 @@ FlowRouter.route('/recipe/:_id', {
         GAnalytics.pageview();
         BlazeLayout.render('mainLayout', {main: 'SingleRecipe'});
     }
-}
+});
 
-);
+FlowRouter.route('/menu', {
+    name: 'menu',
+    action: function() {
+        console.log('/menu');
+        BlazeLayout.render('mainLayout', {main: 'Menu'});
+    }
+});
+
+FlowRouter.route('/shopping-list', {
+    name: 'shopping-list',
+    action: function() {
+        console.log('/shopping-list');
+        BlazeLayout.render('mainLayout', {main: 'Shopping-List'});
+    }
+});
