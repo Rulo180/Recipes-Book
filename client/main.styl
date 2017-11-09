@@ -125,7 +125,7 @@ p
         margin-top 40px
         padding-left $side-nav-large
    
-.new-recipe
+.new-recipe-btn
     margin-bottom 20px
  
 .new-recipe-container
@@ -138,13 +138,15 @@ p
         position absolute
         top 0
         right 0
-        padding 20px  
+        padding 20px 
+        &:hover
+            cursor pointer
+            color red
     label
         display block
         margin-bottom 10px
     textarea, input
         width 100%
- 
 .btn, button
     display inline-block
     cursor pointer
@@ -334,7 +336,7 @@ input, select, textarea
         margin-bottom 10px
     button
         margin-top 20px
-    .fa-trash
+    .fa-trash, .fa-pencil
         opacity 0.3
         cursor pointer
         position absolute
@@ -348,6 +350,10 @@ input, select, textarea
         &:hover
             color red
             opacity 0.6
+    .fa-pencil
+        right 40px
+        &:hover
+            color purp
     .ingredient
         display inline-block
         margin-right 10px

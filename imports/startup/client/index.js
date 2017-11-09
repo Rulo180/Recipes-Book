@@ -9,5 +9,6 @@ import '../../ui/layouts/navLayout.html';
 import '../../ui/recipes/Recipe.js';
 import '../../ui/Menu.js';
 import '../../ui/Shopping-List';
+import '../../ui/recipes/NewRecipe.js';
 
 console.log("imports/startup/client/index.js"); // Se puede borrar

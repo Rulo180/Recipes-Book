@@ -12,7 +12,12 @@ Template.Recipes.onCreated(function() {
 
 Template.Recipes.helpers({
     recipes: ()=> {
-        console.log('Entro al Recipes.helpers');
         return Recipes.find({});
     }
+});
+
+Template.Recipes.events({ 
+    'click .new-recipe-btn': function(event, template) { 
+         Session.set('newRecipe', true);
+    } 
 });
